@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import GoogleEarth from './pages/GoogleEarth';
 import MapBoxGlJS from './pages/MapBoxGlJS';
 import Nvidia from './pages/Nvidia';
+import MapLibreGl from './pages/MapLibreGl';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route path="/google-earth" element={<GoogleEarth />} />
       <Route path="/mapbox-gl-js" element={<MapBoxGlJS />} />
       <Route path="/nvidia" element={<Nvidia />} />
+      <Route path="/maplibre-gl" element={<MapLibreGl />} />
     </Routes>
   );
 }

@@ -10,6 +10,8 @@ const Nvidia = () => {
             justifyContent: 'center',
             height: '100vh',
             gap: 2,
+            backgroundColor: 'black',
+            color: 'white'
         }}>
             <BackButton />
             <h1>  Nvidia  </h1>

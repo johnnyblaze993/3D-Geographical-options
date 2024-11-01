@@ -11,6 +11,8 @@ function GoogleEarth() {
         justifyContent: 'center',
         height: '100vh',
         gap: 2,
+        backgroundColor: 'black',
+        color: 'white'
     }}>
       <BackButton />
       <h1>Google Earth</h1>

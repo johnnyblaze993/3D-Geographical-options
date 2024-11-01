@@ -4,14 +4,24 @@ import { Container, Box, Button, AppBar, Toolbar, Typography } from '@mui/materi
 import React from 'react';
 
 function Home() {
-    const buttonStyle = {
-        borderRadius: '50px', // Creates a pill-shaped button
-        padding: '12px 24px', // Adjusts padding for a larger button
-        fontSize: '16px', // Increases font size
-        width: '200px', // Sets a fixed width
-      }
+  const buttonStyle = {
+    borderRadius: '50px', // Creates a pill-shaped button
+    padding: '12px 24px', // Adjusts padding for a larger button
+    fontSize: '16px', // Increases font size
+    width: '200px', // Sets a fixed width
+  };
+
   return (
-    <>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+        backgroundColor: 'black',
+      }}
+    >
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -19,29 +29,31 @@ function Home() {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Container>
-        <Box
-          sx={{
-            display: 'flex',
-            // flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '90vh',
-            gap: 2,
-          }}
-        >
-          <Button variant="contained" component={Link} to="/google-earth" sx={buttonStyle}>
-            Google Earth
-          </Button>
-          <Button variant="contained" component={Link} to="/mapbox-gl-js"sx={buttonStyle}>
-            MapBox GL JS
-          </Button>
-          <Button variant="contained" component={Link} to="/nvidia"sx={buttonStyle}>
-            Nvidia
-          </Button>
-        </Box>
+      <Container
+        sx={{
+          display: 'flex',
+        //   flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: 2,
+          paddingTop: 4,
+          height: '100%',
+        }}
+      >
+        <Button variant="contained" component={Link} to="/google-earth" sx={buttonStyle}>
+          Google Earth
+        </Button>
+        <Button variant="contained" component={Link} to="/mapbox-gl-js" sx={buttonStyle}>
+          MapBox GL JS
+        </Button>
+        <Button variant="contained" component={Link} to="/nvidia" sx={buttonStyle}>
+          Nvidia
+        </Button>
+        <Button variant="contained" component={Link} to="/maplibre-gl" sx={buttonStyle}>
+          MapLibre GL
+        </Button>
       </Container>
-    </>
+    </Box>
   );
 }
 
