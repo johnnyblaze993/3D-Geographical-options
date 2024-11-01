@@ -1,9 +1,22 @@
-import React from 'react'
+// src/pages/GoogleEarth.tsx
+import React from 'react';
+import BackButton from '../components/BackButton';
 
-const GoogleEarth = () => {
+function GoogleEarth() {
   return (
-    <div>GoogleEarth</div>
-  )
+    <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+        gap: 2,
+    }}>
+      <BackButton />
+      <h1>Google Earth</h1>
+      {/* Add your content here */}
+    </div>
+  );
 }
 
-export default GoogleEarth
+export default GoogleEarth;
