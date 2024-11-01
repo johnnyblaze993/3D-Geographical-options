@@ -1,23 +1,33 @@
-import React from 'react'
-import BackButton from '../components/BackButton'
+//@ts-nocheck
+import React, { useEffect, useRef } from 'react';
+// import { AppStream } from '@omniverse/omniverse-webrtc-streaming-library';
+import BackButton from '../components/BackButton';
 
 const Nvidia = () => {
-    return (
-        <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '100vh',
-            gap: 2,
-            backgroundColor: 'black',
-            color: 'white'
-        }}>
-            <BackButton />
-            <h1>  Nvidia  </h1>
-            {/* Add your content here */}
-        </div>
-    )
-}
+  const videoRef = useRef(null);
 
-export default Nvidia
+  useEffect(() => {
+    const streamConfig = {
+      container: videoRef.current,
+      serverURL: 'ws://localhost:3009', // Replace with your Omniverse server URL
+      onConnect: () => console.log('Connected to Omniverse server'),
+      onDisconnect: () => console.log('Disconnected from Omniverse server'),
+    };
+
+    const appStream = new AppStream(streamConfig);
+    appStream.connect();
+
+    return () => {
+      appStream.disconnect();
+    };
+  }, []);
+
+  return (
+    <div style={{ position: 'relative', height: '100vh' }}>
+      <BackButton />
+      <div ref={videoRef} style={{ width: '100%', height: '100%' }} />
+    </div>
+  );
+};
+
+export default Nvidia;

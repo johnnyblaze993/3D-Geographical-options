@@ -17,7 +17,8 @@
     "maplibre-gl": "^4.7.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+     "@nvidia/omniverse-webrtc-streaming-library": "file:./deps/@omniverse/omniverse-webrtc-streaming-library"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
