@@ -12,7 +12,7 @@ const MapLibreMap: React.FC = () => {
     if (mapContainerRef.current) {
       const map = new maplibregl.Map({
         container: mapContainerRef.current,
-        style: 'https://api.maptiler.com/maps/streets/style.json?key=nWzQgPwBI9oUFEQVLSrd',
+        style: 'https://api.maptiler.com/maps/hybrid/style.json?key=nWzQgPwBI9oUFEQVLSrd', // Hybrid style with high-resolution satellite imagery
         center: [-98.5795, 39.8283], // Centered on the USA
         zoom: 3,
         pitch: 45, // Tilt the map for a 3D perspective

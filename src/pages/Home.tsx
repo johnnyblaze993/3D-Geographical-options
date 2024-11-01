@@ -43,11 +43,11 @@ function Home() {
         <Button variant="contained" component={Link} to="/google-earth" sx={buttonStyle}>
           Google Earth
         </Button>
-        <Button variant="contained" component={Link} to="/mapbox-gl-js" sx={buttonStyle}>
-          MapBox GL JS
-        </Button>
         <Button variant="contained" component={Link} to="/nvidia" sx={buttonStyle}>
           Nvidia
+        </Button>
+        <Button variant="contained" component={Link} to="/mapbox-gl-js" sx={buttonStyle}>
+          MapBox GL JS
         </Button>
         <Button variant="contained" component={Link} to="/maplibre-gl" sx={buttonStyle}>
           MapLibre GL
